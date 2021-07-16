@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Teacher, { promote } from "./teacher";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Default export ... from "module"
+// Named export  {...} from "module"
+// COmbined export Defaulr,{ named } from "module"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   walk() {
+//     console.log("Inside walk method");
+//   }
+// }
+
+// const person = new Person("sarvan");
+
+// class Teacher extends Person {
+//   constructor(name, degree) {
+//     super(name);
+//     this.degree=degree
+//   }
+//   teach() {
+//     console.log("teaching from teacher");
+//   }
+// }
+
+// person.walk();
+
+const teacher = new Teacher("madhu", "BE");
+
+teacher.walk();
+teacher.teach();
